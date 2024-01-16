@@ -53,7 +53,36 @@
 
 - Sysmon, a system monitoring tool for Windows, is installed on the Windows 10 client to capture telemetry data and enhance security monitoring.
 - The process involves downloading the Windows ISO, setting up a virtual machine in Virtual Box, and then installing and configuring Sysmon on the Windows client machine.
+
   
+### Lab 3:
+> The objective of this lab is to configure Hive and Wazuh servers in the SOC Automation Project Home Lab.
+
+### Step 1: Hive Configuration
+
+- Cassandra configuration files are edited to customize listen address, RPC address, and seed address.
+- Cassandra service is stopped, old files are removed, and the service is started again.
+- Elasticsearch configuration files are edited, and the service is started and enabled.
+- Ownership of certain directories is changed to allow the Hive user access.
+- The Hive configuration file is edited to set database and index configurations.
+
+### Step 2: Hive Verification
+
+- Hive services are started and enabled, and their status is verified to be active and running.
+- The Hive dashboard is accessed via the public IP and Port 9000.
+
+>Elasticsearch Troubleshooting: In case of login errors, Elasticsearch memory allocation is adjusted using a custom JVM option file.
+
+### Step 3: Wazuh Configuration
+
+- Administrative credentials are used to log into the Wasa dashboard.
+- An agent is added for a Windows machine using its public IP, and the agent is installed using a provided command.
+- The Wasa service is started, and the agent's status is verified on the dashboard.
+> Note: The overall goal is to detect Mimikatz usage on the Windows 10 client machine, and Telemetry generation and alert creation for Mimikatz will be covered in the next episode.
+
+
+
+
 
 ## FINAL STEP: Deprovision resources 
 - Once you are done with the lab delete the resources, otherwise they will eat away from your free credit (deprovisioning is also a good thing to keep in mind at the enterprise level)
