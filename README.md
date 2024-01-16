@@ -5,21 +5,13 @@
 ### Summary
 - The project involves creating a Security Operations Center (SOC) Automation system in a home lab environment.
 - The aim is to set up a fully functional Wasuh instance with SOAR integration and implement case management using The Hive.
-- The project is of five parts, focusing on hands-on experience for day to day security operations
+- The project is of five parts, focusing on hands-on experience for day-to-day security operations
 
 ![](images/img1.png)
 >FINAL RESULTS: Visual map displaying failed RDP login attempts to a honeypot vm sorted by the location using IP and the attack counter
 
-### Learning Objectives:
-1. Provisioning and de-provisioning virtual environments such as virtual machines, Log Analytics Workspaces, and Azure Sentinel within Azure.
-2. Understand Windows Security Event logs.
-3. Third-party API calls.
-4. Utilization of KQL to query logs.
-5. Security Information and Event Management - log analysis and visualization.
-6. Display attack data on a dashboard with Workbooks (World Map)
-> NOTE: Since we will utilize RDP you will need a Windows host machine - a Windows virtual machine will also work.
 
-### Technologies and Protocols:
+### Technologies:
 * Microsft Azure - a cloud computing service operated by Microsoft for application management via Microsoft-managed data centers
 * Services within Azure: Log Analytics Workspace and Sentinel (Mircosoft's SIEM)
 * Powershell 
