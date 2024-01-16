@@ -1,35 +1,32 @@
-![](images/Azurelogo.png)
-
 # Open Source Security Operations Center (SOC) | Wazuh | The Hive | Shuffle | Virus Total
 
 ### Summary
 - The project involves creating a Security Operations Center (SOC) Automation system in a home lab environment.
 - The aim is to set up a fully functional Wasuh instance with SOAR integration and implement case management using The Hive.
-- The project is of five parts, focusing on hands-on experience for day-to-day security operations
+- The project consists of five labs, focusing on hands-on experience for day-to-day security operations
 
 ![](images/img1.png)
 >FINAL RESULTS: Visual map displaying failed RDP login attempts to a honeypot vm sorted by the location using IP and the attack counter
 
 
 ### Technologies:
-* Microsft Azure - a cloud computing service operated by Microsoft for application management via Microsoft-managed data centers
+* Microsft Azure - a cloud computing service operated by Microsoft for application management via Microsoft-managed data centres
 * Services within Azure: Log Analytics Workspace and Sentinel (Mircosoft's SIEM)
 * Powershell 
 * Remote desktop protocol
- 
-### Overview:
-![](images/azure.png)
 
-> Step-by-step overview of lab:
-1. Create Azure subscription (FREE $200 credits)
-2. Create virtual machine in Azure (honeypot-vm) > turn firewalls off (making it vulnerable to brute force attacks) 
-3. Use a Powershell script to extract  IP of attackers > feed IP into third party API and return back to honeypot-vm specific location information.
-4.  Create log repository in Azure (Log Analytics Workspace) - this will ingest our logs from honeypot-vm
-5. Set up Sentinel - Microsoft’s cloud native SIEM
-6. Use data from SIEM to map out attacker information and magnitude 
+## Lab 1:
+### Step 1: Lab Planning
+- First, we will be creating a logical diagram to plan and map out the lab setup.
+- The emphasis is on building a visual representation to understand the flow of data and identify the components necessary for the system to function.
+- I recommend using draw.io for creating the diagram due to its accessibility and free usage.
 
-## Step 1: Create FREE Azure account: [Azure](https://azure.microsoft.com/en-us/free/ "Azure")
-- Click on “Go to the Azure Portal” or go to `portal.azure.com` once you create your account.
+### Step 2: Diagram Creation Steps
+- The diagram includes components such as a Windows 10 client, router, internet (cloud), Wasa manager, The Hive, Shuffle, and a SOC analyst workstation.
+- Logical connections are established using arrows to represent the flow of events and actions between these components.
+- Different arrow colours and types are used to signify various actions, such as sending events, receiving events, sending alerts, enriching IOCs (Indicators of Compromise), sending emails, and responding to actions.
+
+  
 
 ![](images/img2.PNG)
 
