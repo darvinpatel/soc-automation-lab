@@ -6,7 +6,8 @@
 - The project consists of five labs, focusing on hands-on experience for day-to-day security operations
 
 ![](images/shuffle.png)
->FINAL RESULTS: SOC architecture and the data flow within resources
+![](images/65File.png)
+>FINAL RESULTS: SOC architecture and the data flow within resources which is able to detect and alert the SOC analyst through email
 
 ### Technologies:
 * Microsft Azure - a cloud computing service operated by Microsoft for application management via Microsoft-managed data centres
@@ -65,40 +66,69 @@
 
 ![](images/7File.png)
 > Verifying that Sysmon is successfully installed by checking it under Event Viewer for Windows
+
+
+### Step 4: Wazuh Installation on VM
+![](images/8File.png)
+![](images/9File.png)
+![](images/10File.png)
+![](images/11File.png)
+![](images/12File.png)
+![](images/16File.png)
+![](images/17File.png)
   
 ## Lab 3:
 > The objective of this lab is to configure Hive and Wazuh servers in the SOC Automation Project Home Lab.
 
 ### Step 1: Hive Configuration
 
-- Cassandra configuration files are edited to customize listen address, RPC address, and seed address.
+- Cassandra configuration files are edited to customize listen_address, RPC address, and seed address.
+  ![](images/18File.png)
+  ![](images/19File.png)
+  ![](images/20File.png)
+  
 - Cassandra service is stopped, old files are removed, and the service is started again.
+  ![](images/21File.png)
+  ![](images/22File.png)
 - Elasticsearch configuration files are edited, and the service is started and enabled.
+  ![](images/23File.png)
 - Ownership of certain directories is changed to allow the Hive user access.
+  ![](images/24File.png)
 - The Hive configuration file is edited to set database and index configurations.
+  ![](images/26File.png)
 
 ### Step 2: Hive Verification
 
 - Hive services are started and enabled, and their status is verified to be active and running.
 - The Hive dashboard is accessed via the public IP and Port 9000.
 
+  ![](images/27File.png)
+  > Confirming that all 3 services are in active(running) state
+
+
 >Elasticsearch Troubleshooting: In case of login errors, Elasticsearch memory allocation is adjusted using a custom JVM option file.
 
 ### Step 3: Wazuh Configuration
 
-- Administrative credentials are used to log into the Wasa dashboard.
+- Administrative credentials are used to log into the Wazuh dashboard.
 - An agent is added for a Windows machine using its public IP, and the agent is installed using a provided command.
 - The Waszuh service is started, and the agent's status is verified on the dashboard.
 > Note: The overall goal is to detect Mimikatz usage on the Windows 10 client machine, and Telemetry generation and alert creation for Mimikatz will be covered in the next episode.
 
+ 
+
 ## Lab 4:
 > The objective of this lab is to generate telemetry from a Windows 10 machine and ensure its ingestion into Wazuh. The ultimate goal is to properly configure and send telemetry containing Mimikatz data, triggering a custom alert in Wasa.
 
-### Step 1: Configuration of Wasa:
+### Step 1: Configuration of Wazuh:
 
-- The configuration file for Wasa, named osc.com, is located under Program Files x86 in the Filebeat agent directory.
+- The configuration file for Wasa, named ossec.conf, is located under Program Files x86 in the Filebeat agent directory.
 - The file is opened with Notepad, and log analysis settings are modified, including exclusion of certain event IDs for security reasons.
 - Configuration is adjusted to ingest Sysmon logs, and steps include obtaining the Sysmon channel name from the Windows Event Viewer.
+
+  ![](images/28File.png)
+  ![](images/29File.png)
+  ![](images/30File.png)
 
 ### Step 2: Mimikatz Setup:
 
