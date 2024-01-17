@@ -77,7 +77,7 @@
 
 - Administrative credentials are used to log into the Wasa dashboard.
 - An agent is added for a Windows machine using its public IP, and the agent is installed using a provided command.
-- The Wasa service is started, and the agent's status is verified on the dashboard.
+- The Waszuh service is started, and the agent's status is verified on the dashboard.
 > Note: The overall goal is to detect Mimikatz usage on the Windows 10 client machine, and Telemetry generation and alert creation for Mimikatz will be covered in the next episode.
 
 
