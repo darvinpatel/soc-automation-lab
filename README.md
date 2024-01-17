@@ -55,7 +55,7 @@
 - The process involves downloading the Windows ISO, setting up a virtual machine in Virtual Box, and then installing and configuring Sysmon on the Windows client machine.
 
   
-### Lab 3:
+## Lab 3:
 > The objective of this lab is to configure Hive and Wazuh servers in the SOC Automation Project Home Lab.
 
 ### Step 1: Hive Configuration
@@ -80,16 +80,42 @@
 - The Waszuh service is started, and the agent's status is verified on the dashboard.
 > Note: The overall goal is to detect Mimikatz usage on the Windows 10 client machine, and Telemetry generation and alert creation for Mimikatz will be covered in the next episode.
 
+## Lab 4:
+> The objective of this lab is to generate telemetry from a Windows 10 machine and ensure its ingestion into Wazuh. The ultimate goal is to properly configure and send telemetry containing Mimikatz data, triggering a custom alert in Wasa.
 
+### Step 1: Configuration of Wasa:
 
+- The configuration file for Wasa, named osc.com, is located under Program Files x86 in the Filebeat agent directory.
+- The file is opened with Notepad, and log analysis settings are modified, including exclusion of certain event IDs for security reasons.
+- Configuration is adjusted to ingest Sysmon logs, and steps include obtaining the Sysmon channel name from the Windows Event Viewer.
 
+### Step 2: Mimikatz Setup:
 
-## FINAL STEP: Deprovision resources 
-- Once you are done with the lab delete the resources, otherwise they will eat away from your free credit (deprovisioning is also a good thing to keep in mind at the enterprise level)
-- Search and click Resource group > honeypot-lab > Delete resource group
-- Type the name  *honeypot-lab* to confirm deletion 
+- Windows Defender is disabled or the Downloads folder is excluded to prevent interference while downloading Mimikatz.
+- Mimikatz is downloaded and extracted, and an administrative PowerShell session is used to run Mimikatz.
+- Events related to Mimikatz are checked in the Wasa dashboard to ensure successful ingestion.
 
+### Step 3: Logging Configuration and Rule Creation:
 
+- Configuration changes are made to log all events in Wasa by modifying the osc.com file.
+- The Wazuh manager service is restarted to initiate logging, and Filebeat settings are adjusted for archiving.
+- An index is created for searching logs, and the process of creating a custom rule in Wasa for Mimikatz detection is detailed.
 
-> And there you have it, you have successfully mapped out the location of your RDP attackers using a honey pot vm.
+### Step 4: Testing and Verification:
+
+- The Mimikatz test is performed, and the video demonstrates how to check for Mimikatz events in the Wasa dashboard.
+- Custom rules are created to detect Mimikatz activities, and the final part of the video emphasizes the importance of research and encourages viewers to stay curious and think differently.
+
+## Lab 5
+
+>In the final part of a series on the SOC (Security Operations Center) Automation Project, focusing on connecting the SOAR (Security Orchestration, Automation, and Response) platform Shuffle with The Hive and Wasa.
+
+The presenter recommends watching the previous parts of the series to understand the process of building the lab, installing, configuring, and generating telemetry.
+
+The objective of the video is to create a fully functional lab that integrates Wasa, The Hive, and Shuffle. The presenter introduces a new tool and provides an additional lab for practice.
+
+The video covers the process of creating a workflow in Shuffle, including selecting triggers, naming web hooks, and configuring executions. Troubleshooting steps are discussed, including modifying configuration files and utilizing VirusTotal's API.
+
+The integration involves connecting Shuffle with Wasa, creating an organization and user in The Hive, and setting up an active response in Wasa to block a specified IP address based on analyst input. The presenter emphasizes the limitless possibilities for automation in a SOC environment.
+
 
