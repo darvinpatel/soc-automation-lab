@@ -3,7 +3,7 @@
 ### Summary
 - The project involves creating a Security Operations Center (SOC) Automation system in a home lab environment.
 - The aim is to set up a fully functional Wazuh instance with SOAR integration and implement case management using The Hive.
-- The project consists of five labs, focusing on hands-on experience for day-to-day security operations
+- The project consists of four labs, focusing on hands-on experience for day-to-day security operations
 
 ![](images/shuffle.png)
 ![](images/65File.png)
@@ -136,27 +136,54 @@
 - Mimikatz is downloaded and extracted, and an administrative PowerShell session is used to run Mimikatz.
 - Events related to Mimikatz are checked in the Wasa dashboard to ensure successful ingestion.
 
+![](images/32File.png)
+![](images/33File.png)  
+![](images/34File.png)
+![](images/35File.png)
+![](images/36File.png)
+![](images/37File.png)
+
 ### Step 3: Logging Configuration and Rule Creation:
 
-- Configuration changes are made to log all events in Wasa by modifying the osc.com file.
+- Configuration changes are made to log all events in Wasa by modifying the ossecc.conf file.
 - The Wazuh manager service is restarted to initiate logging, and Filebeat settings are adjusted for archiving.
 - An index is created for searching logs, and the process of creating a custom rule in Wasa for Mimikatz detection is detailed.
+
+![](images/40File.png)
+![](images/41File.png)
+![](images/42File.png)
+![](images/44File.png)
+![](images/45File.png)
+![](images/46File.png)
+![](images/47File.png)
+![](images/48File.png)
+![](images/49File.png)
+![](images/50File.png)
+![](images/51File.png)
+![](images/52File.png)
+![](images/53File.png)
+![](images/54File.png)
+
+
 
 ### Step 4: Testing and Verification:
 
 - The Mimikatz test is performed, and the video demonstrates how to check for Mimikatz events in the Wasa dashboard.
 - Custom rules are created to detect Mimikatz activities, and the final part of the video emphasizes the importance of research and encourages viewers to stay curious and think differently.
+![](images/31File.png)
+![](images/38File.png)
+![](images/39File.png)
+![](images/43File.png)
+![](images/55File.png)
+![](images/56File.png)
+![](images/57File.png)
+![](images/60File.png)
+![](images/61File.png)
+![](images/62File.png)
 
-## Lab 5
 
->In the final part of a series on the SOC (Security Operations Center) Automation Project, focusing on connecting the SOAR (Security Orchestration, Automation, and Response) platform Shuffle with The Hive and Wasa.
-
-The presenter recommends watching the previous parts of the series to understand the process of building the lab, installing, configuring, and generating telemetry.
-
-The objective of the video is to create a fully functional lab that integrates Wasa, The Hive, and Shuffle. The presenter introduces a new tool and provides an additional lab for practice.
-
-The video covers the process of creating a workflow in Shuffle, including selecting triggers, naming web hooks, and configuring executions. Troubleshooting steps are discussed, including modifying configuration files and utilizing VirusTotal's API.
-
-The integration involves connecting Shuffle with Wasa, creating an organization and user in The Hive, and setting up an active response in Wasa to block a specified IP address based on analyst input. The presenter emphasizes the limitless possibilities for automation in a SOC environment.
+## Conclusion
+![](images/65File.png)
+> Both the mimikatz execution were successfully detected and email was sent with detailed information
 
 
