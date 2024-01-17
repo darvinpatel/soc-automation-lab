@@ -6,7 +6,7 @@
 - The project consists of four labs, focusing on hands-on experience for day-to-day security operations
 
 ![](images/shuffle.png)
-![](images/65File.png)
+![](images/65File.jpg)
 >FINAL RESULTS: SOC architecture and the data flow within resources which is able to detect and alert the SOC analyst through email
 
 ### Technologies:
