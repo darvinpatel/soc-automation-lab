@@ -2,18 +2,18 @@
 
 ### Summary
 - The project involves creating a Security Operations Center (SOC) Automation system in a home lab environment.
-- The aim is to set up a fully functional Wasuh instance with SOAR integration and implement case management using The Hive.
+- The aim is to set up a fully functional Wazuh instance with SOAR integration and implement case management using The Hive.
 - The project consists of five labs, focusing on hands-on experience for day-to-day security operations
 
-![](images/img1.png)
->FINAL RESULTS: Visual map displaying failed RDP login attempts to a honeypot vm sorted by the location using IP and the attack counter
-
+![](images/shuffle.png)
+>FINAL RESULTS: SOC architecture and the data flow within resources
 
 ### Technologies:
 * Microsft Azure - a cloud computing service operated by Microsoft for application management via Microsoft-managed data centres
-* Services within Azure: Log Analytics Workspace and Sentinel (Mircosoft's SIEM)
-* Powershell 
-* Remote desktop protocol
+* Services within Azure: Virtual Machines for Wazuh instance and The Hive
+* Shuffle 
+* Virus Total
+* Mimikatz
 
 ## Lab 1:
 ### Step 1: Lab Planning
@@ -36,6 +36,8 @@
 - The diagram serves as a reference for the subsequent parts of the series, where the focus will shift to the installation of virtual machines.
 - The goal is to build a functional SOC Automation system with three hosts, including one PC and two servers (The Hive and Wazah) residing in the cloud.
 
+ ![](images/lab.draw.io.png)
+
 ## Lab 2:
 > Lab 2 aims to install applications and virtual machines, targeting one Windows 10 machine with Sysmon, one Wazuh server, and one Hive server.
 > Virtual machines for Wazuh and Hive will be set up in the cloud, while the Windows 10 client will be hosted locally on a server.
@@ -47,13 +49,22 @@
 ### Step 2: Virtual Machine setup
 
 - Windows 10 and Ubuntu 20.04 are chosen as the client and server operating systems, respectively.
-- Virtual Box is selected as the virtualization tool for installation. The process includes downloading, verifying, and installing Virtual Box on the host machine.
+- Azure VMs are selected as the virtualization tool for installation. The process includes creating a vm on Azure portal
+
+> Spin up a Windows VM and RDP into it for next steps
 
 ### Step 3: Sysmon Installation
 
 - Sysmon, a system monitoring tool for Windows, is installed on the Windows 10 client to capture telemetry data and enhance security monitoring.
 - The process involves downloading the Windows ISO, setting up a virtual machine in Virtual Box, and then installing and configuring Sysmon on the Windows client machine.
 
+![](images/5File.png)
+![](images/6File.png)
+> Sysmon64 started in our VM
+
+
+![](images/7File.png)
+> Verifying that Sysmon is successfully installed by checking it under Event Viewer for Windows
   
 ## Lab 3:
 > The objective of this lab is to configure Hive and Wazuh servers in the SOC Automation Project Home Lab.
