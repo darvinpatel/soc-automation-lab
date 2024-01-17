@@ -37,7 +37,7 @@
 - The diagram serves as a reference for the subsequent parts of the series, where the focus will shift to the installation of virtual machines.
 - The goal is to build a functional SOC Automation system with three hosts, including one PC and two servers (The Hive and Wazah) residing in the cloud.
 
- ![](images/lab.draw.io.png)
+ ![](images/lab.drawio.png)
 
 ## Lab 2:
 > Lab 2 aims to install applications and virtual machines, targeting one Windows 10 machine with Sysmon, one Wazuh server, and one Hive server.
@@ -59,23 +59,23 @@
 - Sysmon, a system monitoring tool for Windows, is installed on the Windows 10 client to capture telemetry data and enhance security monitoring.
 - The process involves downloading the Windows ISO, setting up a virtual machine in Virtual Box, and then installing and configuring Sysmon on the Windows client machine.
 
-![](images/5File.png)
-![](images/6File.png)
+![](images/5File.jpg)
+![](images/6File.jpg)
 > Sysmon64 started in our VM
 
 
-![](images/7File.png)
+![](images/7File.jpg)
 > Verifying that Sysmon is successfully installed by checking it under Event Viewer for Windows
 
 
 ### Step 4: Wazuh Installation on VM
-![](images/8File.png)
-![](images/9File.png)
-![](images/10File.png)
-![](images/11File.png)
-![](images/12File.png)
-![](images/16File.png)
-![](images/17File.png)
+![](images/8File.jpg)
+![](images/9File.jpg)
+![](images/10File.jpg)
+![](images/11File.jpg)
+![](images/12File.jpg)
+![](images/16File.jpg)
+![](images/17File.jpg)
   
 ## Lab 3:
 > The objective of this lab is to configure Hive and Wazuh servers in the SOC Automation Project Home Lab.
@@ -83,26 +83,26 @@
 ### Step 1: Hive Configuration
 
 - Cassandra configuration files are edited to customize listen_address, RPC address, and seed address.
-  ![](images/18File.png)
-  ![](images/19File.png)
-  ![](images/20File.png)
+  ![](images/18File.jpg)
+  ![](images/19File.jpg)
+  ![](images/20File.jpg)
   
 - Cassandra service is stopped, old files are removed, and the service is started again.
-  ![](images/21File.png)
-  ![](images/22File.png)
+  ![](images/21File.jpg)
+  ![](images/22File.jpg)
 - Elasticsearch configuration files are edited, and the service is started and enabled.
-  ![](images/23File.png)
+  ![](images/23File.jpg)
 - Ownership of certain directories is changed to allow the Hive user access.
-  ![](images/24File.png)
+  ![](images/24File.jpg)
 - The Hive configuration file is edited to set database and index configurations.
-  ![](images/26File.png)
+  ![](images/26File.jpg)
 
 ### Step 2: Hive Verification
 
 - Hive services are started and enabled, and their status is verified to be active and running.
 - The Hive dashboard is accessed via the public IP and Port 9000.
 
-  ![](images/27File.png)
+  ![](images/27File.jpg)
   > Confirming that all 3 services are in active(running) state
 
 
@@ -126,9 +126,9 @@
 - The file is opened with Notepad, and log analysis settings are modified, including exclusion of certain event IDs for security reasons.
 - Configuration is adjusted to ingest Sysmon logs, and steps include obtaining the Sysmon channel name from the Windows Event Viewer.
 
-  ![](images/28File.png)
-  ![](images/29File.png)
-  ![](images/30File.png)
+  ![](images/28File.jpg)
+  ![](images/29File.jpg)
+  ![](images/30File.jpg)
 
 ### Step 2: Mimikatz Setup:
 
@@ -136,12 +136,12 @@
 - Mimikatz is downloaded and extracted, and an administrative PowerShell session is used to run Mimikatz.
 - Events related to Mimikatz are checked in the Wasa dashboard to ensure successful ingestion.
 
-![](images/32File.png)
-![](images/33File.png)  
-![](images/34File.png)
-![](images/35File.png)
-![](images/36File.png)
-![](images/37File.png)
+![](images/32File.jpg)
+![](images/33File.jpg)  
+![](images/34File.jpg)
+![](images/35File.jpg)
+![](images/36File.jpg)
+![](images/37File.jpg)
 
 ### Step 3: Logging Configuration and Rule Creation:
 
@@ -149,20 +149,20 @@
 - The Wazuh manager service is restarted to initiate logging, and Filebeat settings are adjusted for archiving.
 - An index is created for searching logs, and the process of creating a custom rule in Wasa for Mimikatz detection is detailed.
 
-![](images/40File.png)
-![](images/41File.png)
-![](images/42File.png)
-![](images/44File.png)
-![](images/45File.png)
-![](images/46File.png)
-![](images/47File.png)
-![](images/48File.png)
-![](images/49File.png)
-![](images/50File.png)
-![](images/51File.png)
-![](images/52File.png)
-![](images/53File.png)
-![](images/54File.png)
+![](images/40File.jpg)
+![](images/41File.jpg)
+![](images/42File.jpg)
+![](images/44File.jpg)
+![](images/45File.jpg)
+![](images/46File.jpg)
+![](images/47File.jpg)
+![](images/48File.jpg)
+![](images/49File.jpg)
+![](images/50File.jpg)
+![](images/51File.jpg)
+![](images/52File.jpg)
+![](images/53File.jpg)
+![](images/54File.jpg)
 
 
 
@@ -170,20 +170,20 @@
 
 - The Mimikatz test is performed, and the video demonstrates how to check for Mimikatz events in the Wasa dashboard.
 - Custom rules are created to detect Mimikatz activities, and the final part of the video emphasizes the importance of research and encourages viewers to stay curious and think differently.
-![](images/31File.png)
-![](images/38File.png)
-![](images/39File.png)
-![](images/43File.png)
-![](images/55File.png)
-![](images/56File.png)
-![](images/57File.png)
-![](images/60File.png)
-![](images/61File.png)
-![](images/62File.png)
+![](images/31File.jpg)
+![](images/38File.jpg)
+![](images/39File.jpg)
+![](images/43File.jpg)
+![](images/55File.jpg)
+![](images/56File.jpg)
+![](images/57File.jpg)
+![](images/60File.jpg)
+![](images/61File.jpg)
+![](images/62File.jpg)
 
 
 ## Conclusion
-![](images/65File.png)
-> Both the mimikatz execution were successfully detected and email was sent with detailed information
+![](images/65File.jpg)
+> Both the mimikatz execution were successfully detected and email was sent with detailed information in real time
 
 
